@@ -1,0 +1,9 @@
+$bg-color: lightblue;
+
+#background {
+    background-image: "../assets/img/bg.png";
+    height: 100%;
+}
+html {
+    background-color: $bg-color;
+}
