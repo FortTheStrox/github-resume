@@ -1,9 +1,100 @@
-#background {
-  background-image: url("../assets/img/bg.png");
-  height: 100%;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252A;
 }
 
-html {
-  background-color: lightblue;
+li, a, button {
+  font-weight: 500;
+  font-size: 1em;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+/*
+    HEADER CONTENT
+*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/*
+    CORE CONTENT
+*/
+.core .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+/*
+    FOOTER CONTENT
+*/
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 10%;
 }
 /*# sourceMappingURL=base.css.map */
