@@ -3,10 +3,11 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #24252A;
 }
 
-li, a, button {
+li,
+a,
+button {
   font-weight: 500;
   font-size: 1em;
   color: #edf0f1;
@@ -17,6 +18,8 @@ li, a, button {
     HEADER CONTENT
 */
 header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#24252a), to(rgba(36, 37, 42, 0.1)));
+  background: linear-gradient(to bottom, #24252a, rgba(36, 37, 42, 0.1));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,6 +30,9 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 10%;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
 }
 
 .logo {
@@ -64,10 +70,58 @@ button button:hover {
 /*
     CORE CONTENT
 */
-.core .container {
+#fadein {
+  opacity: 0;
+}
+
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #24252a;
+}
+
+.landing {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.landing .overlay {
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+  top: 40vh;
+  left: 43vw;
+  z-index: 100;
+}
+
+.landing #background-video {
+  height: 100%;
+  width: 100%;
+}
+
+.about {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -78,9 +132,25 @@ button button:hover {
   color: white;
 }
 
+.skillset {
+  opacity: 0;
+}
+
+.resume {
+  opacity: 0;
+}
+
 /*
     FOOTER CONTENT
 */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#24252a), to(rgba(36, 37, 42, 0.1)));
+  background: linear-gradient(to top, #24252a, rgba(36, 37, 42, 0.1));
+}
+
 footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,5 +166,6 @@ footer .container {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 10%;
+  color: white;
 }
 /*# sourceMappingURL=base.css.map */
