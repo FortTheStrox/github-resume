@@ -32,14 +32,6 @@ header {
     align-items: center;
     padding: 30px 10%;
     width: 100vw;
-
-    // these 2 lines dictate how the header appears above the video background
-    position: fixed;
-    z-index: 1;
-
-
-
-
 }
 
 .logo {
@@ -90,37 +82,16 @@ body {
     background-color: $bg-color;
 }
 
-.landing {
-    opacity: 0;
-
-    display: flex;
-    flex: 1;
-    
-    // for text overlay on video landing page
-    .overlay {
-        color: black;
-        font-family: 'Josefin Sans', sans-serif;
-
-        // positioning
-        position: absolute;
-        top: 40vh;
-        left: 43vw;
-        z-index: 100;
-    }
-
-    #background-video {
-        height: 100%;
-        width: 100%;
-    }
-}
 
 .about {
     opacity: 0;
+    
     display: flex;
+    flex-direction: column;
     flex: 1;
 
     .container {
-        flex-direction: column;
+        
         justify-content: center;
         color: white;
     }
@@ -128,10 +99,30 @@ body {
 
 .skillset {
     opacity: 0;
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .container {
+        
+        justify-content: center;
+        color: white;
+    }
 }
 
 .resume {
     opacity: 0;
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .container {
+        
+        justify-content: center;
+        color: white;
+    }
 }
 
 
@@ -140,10 +131,6 @@ body {
 */
 
 footer {
-    // these 3 lines dictate how the footer appears above the video background
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
 
     // background color and gradient
     background: linear-gradient(to top,
