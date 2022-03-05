@@ -3,6 +3,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 li,
@@ -18,8 +19,7 @@ button {
     HEADER CONTENT
 */
 header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#24252a), to(rgba(36, 37, 42, 0.1)));
-  background: linear-gradient(to bottom, #24252a, rgba(36, 37, 42, 0.1));
+  background-color: #24252a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,20 +90,64 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1vh;
+}
+
+.about .container {
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  color: white;
+}
+
+.about .container .picture {
+  width: 50vw;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .container .picture img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about .container .description {
+  padding: 5vw;
+  width: 50vw;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.about .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .container .description .break {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  height: 0;
 }
 
 .skillset {
@@ -152,8 +196,7 @@ body {
     FOOTER CONTENT
 */
 footer {
-  background: -webkit-gradient(linear, left bottom, left top, from(#24252a), to(rgba(36, 37, 42, 0.1)));
-  background: linear-gradient(to top, #24252a, rgba(36, 37, 42, 0.1));
+  background-color: #24252a;
 }
 
 footer .container {
@@ -164,9 +207,9 @@ footer .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

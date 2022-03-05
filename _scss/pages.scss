@@ -4,6 +4,8 @@ $bg-color: rgba(36, 37, 42, 1);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 li,
@@ -21,11 +23,7 @@ button {
 
 header {
     // background color and gradient
-    background: linear-gradient(
-        to bottom,
-        $bg-color,
-        rgba(36, 37, 42, 0.1)
-    );
+    background-color: $bg-color;
 
     display: flex;
     justify-content: space-between;
@@ -87,13 +85,54 @@ body {
     opacity: 0;
     
     display: flex;
-    flex-direction: column;
     flex: 1;
+    
+    // set height of about flexbox
+    // kind of a cheat since we don't want the footer to be pushed out of view
+    // so we set the height super small and the img autoresizes to be between the header
+    // and footer
+    height: 1vh;
 
     .container {
+        // flex layout of items
+        display: inherit;
+        flex-direction: row;
+        width: 100%;
         
-        justify-content: center;
         color: white;
+        .picture {
+            width: 50vw;
+            overflow-wrap: break-word;
+
+            // flex layout of items inside
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // allows resizing of image
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .description {
+            padding: 5vw;
+            width: 50vw;
+            overflow-wrap: break-word;
+
+            // flex layout of items inside
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // this allows break in between lines of content
+            .break {
+                flex-basis: 10%;
+                height: 0;
+            }
+        }
     }
 }
 
@@ -133,16 +172,13 @@ body {
 footer {
 
     // background color and gradient
-    background: linear-gradient(to top,
-            $bg-color,
-            rgba(36, 37, 42, 0.1)
-    );
+    background-color: $bg-color;
 
     .container {
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 30px 10%;
 
