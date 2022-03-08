@@ -81,86 +81,32 @@ body {
 }
 
 
-.about {
-    opacity: 0;
-    
-    display: flex;
-    flex: 1;
-    
-    // set height of about flexbox
-    // kind of a cheat since we don't want the footer to be pushed out of view
-    // so we set the height super small and the img autoresizes to be between the header
-    // and footer
-    height: 1vh;
-
-    .container {
-        // flex layout of items
-        display: inherit;
-        flex-direction: row;
-        width: 100%;
-        
-        color: white;
-        .picture {
-            width: 50vw;
-            overflow-wrap: break-word;
-
-            // flex layout of items inside
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            // allows resizing of image
-            img {
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
-
-        .description {
-            padding: 5vw;
-            width: 50vw;
-            overflow-wrap: break-word;
-
-            // flex layout of items inside
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            // this allows break in between lines of content
-            .break {
-                flex-basis: 10%;
-                height: 0;
-            }
-        }
-    }
-}
-
 .skillset {
     opacity: 0;
     
+    // so main content section takes up as much space as possible
     display: flex;
-    flex-direction: column;
     flex: 1;
 
-    .container {
-        
-        justify-content: center;
-        color: white;
-    }
-}
-
-.resume {
-    opacity: 0;
-    
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    justify-content: center;
 
     .container {
+        display: flex;
+        flex-direction: column;
         
-        justify-content: center;
         color: white;
+
+        .buttons_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            button {
+                // create space between buttons
+                margin-left: 1vw;
+                margin-right: 1vw;
+            }
+        }
     }
 }
 

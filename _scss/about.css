@@ -97,7 +97,9 @@ body {
 }
 
 .about .container {
-  display: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -216,4 +218,4 @@ footer .container {
   padding: 30px 10%;
   color: white;
 }
-/*# sourceMappingURL=pages.css.map */
+/*# sourceMappingURL=about.css.map */
