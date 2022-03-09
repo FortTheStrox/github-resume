@@ -96,6 +96,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 15vw;
 }
 
 .skillset .container {
@@ -107,6 +108,15 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
+}
+
+.skillset .container .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .skillset .container .buttons_row {
@@ -125,6 +135,51 @@ body {
 .skillset .container .buttons_row button {
   margin-left: 1vw;
   margin-right: 1vw;
+}
+
+.skillset .container .cards_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* On mouse-over, add a deeper shadow */
+  /* Add rounded corners to the top left and the top right corner of the image 
+            img {
+                border-radius: 5px 5px 0 0;
+            }
+            */
+}
+
+.skillset .container .cards_row .card {
+  /* Add shadows to create the "card" effect */
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  /* 5px rounded corners */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.skillset .container .cards_row .card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*

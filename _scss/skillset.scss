@@ -83,29 +83,72 @@ body {
 
 .skillset {
     opacity: 0;
-    
+
     // so main content section takes up as much space as possible
     display: flex;
     flex: 1;
 
     justify-content: center;
 
+    padding: 0 15vw;
+
+
     .container {
         display: flex;
         flex-direction: column;
-        
+    
         color: white;
 
+        .caption {
+            display: flex;
+            justify-content: center;
+        }
+
+        // box for where the buttons are laid out on
         .buttons_row {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            
+
             button {
                 // create space between buttons
                 margin-left: 1vw;
                 margin-right: 1vw;
             }
+        }
+
+        // box where the cards are laid out on
+        .cards_row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+
+            .card {
+                /* Add shadows to create the "card" effect */
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                border-radius: 5px; /* 5px rounded corners */
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // space between cards
+                margin-left: 10px;
+                margin-right: 10px;
+            }  
+
+            /* On mouse-over, add a deeper shadow */
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+            /* Add rounded corners to the top left and the top right corner of the image 
+            img {
+                border-radius: 5px 5px 0 0;
+            }
+            */
         }
     }
 }
