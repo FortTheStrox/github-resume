@@ -7,5 +7,14 @@ $( document ).ready(function() {
     $(".about").delay(200).animate({"opacity": "1"},700);
     $(".skillset").delay(200).animate({"opacity": "1"},700);
     $(".resume").delay(200).animate({"opacity": "1"},700);
-
+    
+    $('.category1').on('click', function() {
+        $('.card1').slideToggle(300);
+    });
+    $('.category2').on('click', function() {
+        $('.card2').slideToggle(300);
+    });
+    $('.category3').on('click', function() {
+        $('.card3').slideToggle(300);
+    });
 });
