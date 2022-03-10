@@ -1,0 +1,123 @@
+$bg-color: rgba(36, 37, 42, 1);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+li,
+a,
+button {
+    font-weight: 500;
+    font-size: 1em;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+/*
+    HEADER CONTENT
+*/
+
+header {
+    // background color and gradient
+    background-color: $bg-color;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    width: 100vw;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    li {
+        display: inline-block;
+        padding: 0px 20px;
+
+        a {
+            transition: all 0.3s ease 0s;
+        }
+
+        a:hover {
+            color: #0088a9;
+        }
+    }
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    button:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+}
+
+/*
+    CORE CONTENT
+*/
+
+#fadein {
+    opacity: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    height: 100vh; // fills up rest of view
+    background-color: $bg-color;
+}
+
+.resume {
+    opacity: 0;
+    
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    // put container box in middle of resume container
+    justify-content: center;
+
+    // flexbox properties to center item insider container 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+}
+
+
+/*
+    FOOTER CONTENT
+*/
+
+footer {
+
+    // background color and gradient
+    background-color: $bg-color;
+
+    .container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 10%;
+
+        color: white;
+    }
+}
