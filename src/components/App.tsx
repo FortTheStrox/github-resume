@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import './../css/main.min.css';
 
 import React from 'react';
@@ -34,14 +33,31 @@ class App extends React.Component<Props, state> {
   // changes state to dark
   changeTheme() {
     this.setState({ dark: !this.state.dark });
-    console.log(this.state.dark);
   }
 
   render() {
     return (
-      <div className={'App ' + (this.state.dark ? 'theme--dark' : 'theme-default')}>
-        <button onClick={this.changeTheme}>click me</button>
-        <Header></Header>
+      <div className='App'>
+        <div>
+          <div className={'theme ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
+            <div className='base'>
+              <nav className='nav-bar'>
+                <ul className={'nav-links ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#" title="about">ABOUT</a></li>
+                  <li><a href="#" title="skillset">SKILLSET</a></li>
+                  <li><a href="#" title="resume">RESUME</a></li>
+                  <li><button onClick={this.changeTheme}>click me</button></li>
+                </ul>
+              </nav>
+              
+              <Header></Header>
+              <p>lsdkfrjs</p>
+            </div>
+            
+          </div>
+        </div>
+        
       </div>
     );
   }

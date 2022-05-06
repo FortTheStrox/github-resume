@@ -3,7 +3,6 @@
 @import 'themes';
 
 .header {
-    height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -12,7 +11,7 @@
 .landing {
     @include themed() {
         color: t($text);
-        background: t($bg);
+        background-color: t($bg);
     }
 
     display: flex;

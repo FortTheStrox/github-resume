@@ -1,37 +1,48 @@
 @import 'globals';
+@import 'themes';
 
-.header {
-    // background color and gradient
-    background: linear-gradient(
-        to bottom,
-        $bg,
-        rgba(36, 37, 42, 0.1)
-    );
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    width: 100vw;
-
-    // these 2 lines dictate how the header appears above the video background
-}
 
 .logo {
     cursor: pointer;
 }
 
-.nav_links {
+.nav-bar {
+    display: flex;
+    justify-content: right;
+    ul {
+        margin: 0;
+        padding: 20px 0 0 0;
+    }
+}
+
+.nav-links {
+    
     li {
         display: inline-block;
         padding: 0px 20px;
+
+        
 
         a {
             transition: all 0.3s ease 0s;
         }
 
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+            
+            @include themed() {
+                color: t($text);
+            }
+        }
+
         a:hover {
-            color: #0088a9;
+            text-decoration: underline;
+            text-underline-offset: 0.5em;
+            text-decoration-thickness: 0.1em;
         }
     }
 }

@@ -1,0 +1,12 @@
+.theme {
+    height: 100vh;
+    width: 100%;
+}
+  
+
+.base {
+    @include themed() {
+        color: t($text);
+        background: t($bg);
+    }
+}
