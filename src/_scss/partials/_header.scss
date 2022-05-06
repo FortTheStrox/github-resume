@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import 'globals';
+@import 'themes';
+
+.header {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.landing {
+    @include themed() {
+        color: t($text);
+        background: t($bg);
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    max-width: 1440px;
+
+    padding: 120px 100px;
+    margin: 0 auto;
+}
+
+.tagline {
+
+    font-weight: 600;
+}

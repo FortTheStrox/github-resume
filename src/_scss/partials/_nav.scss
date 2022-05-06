@@ -1,0 +1,50 @@
+@import 'globals';
+
+.header {
+    // background color and gradient
+    background: linear-gradient(
+        to bottom,
+        $bg,
+        rgba(36, 37, 42, 0.1)
+    );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    width: 100vw;
+
+    // these 2 lines dictate how the header appears above the video background
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    li {
+        display: inline-block;
+        padding: 0px 20px;
+
+        a {
+            transition: all 0.3s ease 0s;
+        }
+
+        a:hover {
+            color: #0088a9;
+        }
+    }
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    button:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+}
