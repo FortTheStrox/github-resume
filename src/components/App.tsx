@@ -42,6 +42,7 @@ class App extends React.Component<Props, state> {
           <div className={'theme ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
             <div className='base'>
               <nav className='nav-bar'>
+                <h3></h3>
                 <ul className={'nav-links ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
                   <li><a href="#">HOME</a></li>
                   <li><a href="#" title="about">ABOUT</a></li>

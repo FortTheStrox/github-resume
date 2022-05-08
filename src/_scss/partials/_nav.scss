@@ -1,6 +1,7 @@
 @import 'globals';
 @import 'themes';
 
+// styling for everything related to the nav bar
 
 .logo {
     cursor: pointer;
@@ -15,24 +16,19 @@
     }
 }
 
+// styling for how the nav bar list is shown
 .nav-links {
     
     li {
         display: inline-block;
         padding: 0px 20px;
 
-        
-
-        a {
-            transition: all 0.3s ease 0s;
-        }
-
         a:link {
             text-decoration: none;
         }
 
         a:visited {
-            color: white;
+            color: $white;
             
             @include themed() {
                 color: t($text);
