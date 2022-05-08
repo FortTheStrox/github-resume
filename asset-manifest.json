@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.95d91947.css",
-    "main.js": "/react-gh-pages/static/js/main.b67960ad.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.95d91947.css.map": "/react-gh-pages/static/css/main.95d91947.css.map",
-    "main.b67960ad.js.map": "/react-gh-pages/static/js/main.b67960ad.js.map"
+    "main.css": "/github-resume/static/css/main.95d91947.css",
+    "main.js": "/github-resume/static/js/main.b67960ad.js",
+    "index.html": "/github-resume/index.html",
+    "main.95d91947.css.map": "/github-resume/static/css/main.95d91947.css.map",
+    "main.b67960ad.js.map": "/github-resume/static/js/main.b67960ad.js.map"
   },
   "entrypoints": [
     "static/css/main.95d91947.css",
