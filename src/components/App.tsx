@@ -1,7 +1,19 @@
+// MODULES
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+// COMPONENTS
+import Header from './Header';
+import Skillset from './Skillset';
+import Projects from './Projects';
+
+// STYLING
 import './../css/main.min.css';
 
-import React from 'react';
-import Header from './Header';
 
 type Props = {
   // none
@@ -42,18 +54,55 @@ class App extends React.Component<Props, state> {
           <div className={'theme ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
             <div className='base'>
               <nav className='nav-bar'>
-                <h3></h3>
+                <h3>{}</h3>
                 <ul className={'nav-links ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
-                  <li><a href="#">HOME</a></li>
-                  <li><a href="#" title="about">ABOUT</a></li>
-                  <li><a href="#" title="skillset">SKILLSET</a></li>
-                  <li><a href="#" title="resume">RESUME</a></li>
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : undefined
+                      }
+                    > 
+                      HOME
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/SKILLSET"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : undefined
+                      }
+                    > 
+                      SKILLSET
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/PROJECTS"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : undefined
+                      }
+                    > 
+                      PROJECTS
+                    </NavLink>
+                  </li>
                   <li><button onClick={this.changeTheme}>click me</button></li>
                 </ul>
               </nav>
+              <Routes>
+                <Route path="/" element={<Header />} />
+                <Route path="/SKILLSET" element={<Skillset />} />
+                <Route path="/PROJECTS" element={<Projects />} />
+                <Route
+                  path="*"
+                  element={
+                    <main style={{ padding: "1rem" }}>
+                      <p>There's nothing here!</p>
+                    </main>
+                  }
+                />
+              </Routes>
               
-              <Header></Header>
-              <p>lsdkfrjs</p>
             </div>
             
           </div>

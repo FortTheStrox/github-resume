@@ -23,23 +23,28 @@
         display: inline-block;
         padding: 0px 20px;
 
-        a:link {
+        // default state of link
+        a {
             text-decoration: none;
-        }
 
-        a:visited {
-            color: $white;
-            
             @include themed() {
                 color: t($text);
             }
         }
 
-        a:hover {
+        // for active page link
+        .active-link:link {
             text-decoration: underline;
             text-underline-offset: 0.5em;
             text-decoration-thickness: 0.1em;
         }
+
+        // for non-active page links 
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5em;
+            text-decoration-thickness: 0.1em;
+        }        
     }
 }
 

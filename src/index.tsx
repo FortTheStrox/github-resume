@@ -9,10 +9,10 @@ import {
 import './css/main.min.css';
 import App from './components/App';
 
-// add between version and private for deploy
+// add between version and private for deploy 
 // "homepage": "https://fortthestrox.github.io/github-resume",
 
-// for gh-pages, change to just / for localhosted instance
+// for gh-pages, change to just / for localhosted instance https://dev.to/janjibdev/problem-with-react-router-app-and-github-pages-lij
 // "homepage": "http://{your github name}.github.io/{your repository name}"
 // <Route path='/{your repository name}' exact component={Homepage}/>
 
@@ -20,17 +20,7 @@ import App from './components/App';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/github-resume" element={<App />} />
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: "1rem" }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
-      </Routes>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
