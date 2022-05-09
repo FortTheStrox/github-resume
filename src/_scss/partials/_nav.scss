@@ -12,7 +12,24 @@
     justify-content: right;
     ul {
         margin: 0;
-        padding: 20px 0 0 0;
+        padding: 3em 7% 0 0;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex: 1;
+
+        margin: 0;
+        padding: 1em 0 0 140px;
+
+        @include themed() {
+            color: t($text);
+        }
+
+        text-decoration: none;
+        font-size:xx-large
     }
 }
 
@@ -45,18 +62,5 @@
             text-underline-offset: 0.5em;
             text-decoration-thickness: 0.1em;
         }        
-    }
-}
-
-button {
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-
-    button:hover {
-        background-color: rgba(0, 136, 169, 0.8);
     }
 }

@@ -1,3 +1,1 @@
-TRANSFER THEME TOGGLE BUTTON TO NAV CLASS
-
-CHANGE APP TO BE NORMAL AGAIN AFTER TRANSFER 
+fix css in title in portfolio, probably should move some of its logic from base-page to portfolio

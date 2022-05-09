@@ -13,16 +13,37 @@ body {
     margin: 0;
 }
 
-.theme {
-    height: 100vh;
-    width: 100%;
-}
-  
 
 .base {
     @include themed() {
         color: t($text);
         background: t($bg);
+    }
+    
+    .base-page {
+        max-width: 1440px;
+        max-height: 100%;
+        
+        // these dictate the position of title and other stuff in portfolio probably should fix this
+        padding: 0px 50px 60px 5px;
+        margin: 0 0 0 7%;
+    }
+}
+
+footer {
+    // these 3 lines dictate how the footer appears above the video background
+    bottom: 0;
+    width: 100vw;
+
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 10%;
+
+        color: white;
     }
 }
 

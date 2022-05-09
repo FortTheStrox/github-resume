@@ -2,13 +2,16 @@
 @import 'globals';
 @import 'themes';
 
-// this style page is for the header/home page
+// this style page is for the about page
 
 
-.header {
-
+.about {
     display: flex;
     justify-content: center;
+    // delete this
+    flex-direction: column;
+
+    flex-grow: 1
 }
 
 .landing {
@@ -22,6 +25,7 @@
     justify-content: space-around;
 
     max-width: 1440px;
+    max-height: 100%;
 
     padding: 120px 100px;
     margin: 0 auto;

@@ -5,14 +5,19 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { SocialIcon } from 'react-social-icons';
+import IconButton from "@mui/material/IconButton";
+import Brightness3Icon from '@mui/icons-material/Brightness3';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 // COMPONENTS
-import Header from './Header';
+import About from './About';
 import Skillset from './Skillset';
-import Projects from './Projects';
+import Portfolio from './Portfolio';
 
 // STYLING
 import './../css/main.min.css';
+
 
 
 type Props = {
@@ -54,16 +59,26 @@ class App extends React.Component<Props, state> {
           <div className={'theme ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
             <div className='base'>
               <nav className='nav-bar'>
-                <h3>{}</h3>
+                <NavLink className='logo' to="/">Jared Erlien</NavLink>
                 <ul className={'nav-links ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
                   <li>
-                    <NavLink
+                  <NavLink
                       to="/"
                       className={({ isActive }) =>
                         isActive ? "active-link" : undefined
                       }
                     > 
-                      HOME
+                      PORTFOLIO
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/ABOUT"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : undefined
+                      }
+                    > 
+                      ABOUT
                     </NavLink>
                   </li>
                   <li>
@@ -77,22 +92,26 @@ class App extends React.Component<Props, state> {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink
-                      to="/PROJECTS"
-                      className={({ isActive }) =>
-                        isActive ? "active-link" : undefined
-                      }
-                    > 
-                      PROJECTS
-                    </NavLink>
+                    
                   </li>
-                  <li><button onClick={this.changeTheme}>click me</button></li>
+                  <li>
+                    <IconButton
+                      edge="end"
+                      color="inherit"
+                      aria-label="mode"
+                      onClick={this.changeTheme}
+                    >
+                      {this.state.dark ? <Brightness3Icon /> : <Brightness7Icon />}
+                    </IconButton>
+                  </li>
                 </ul>
               </nav>
+              <div className='base-page'>
               <Routes>
-                <Route path="/" element={<Header />} />
+                <Route path="/" element={<Portfolio />} />
+                <Route path="/ABOUT" element={<About />} />
                 <Route path="/SKILLSET" element={<Skillset />} />
-                <Route path="/PROJECTS" element={<Projects />} />
+                
                 <Route
                   path="*"
                   element={
@@ -102,6 +121,23 @@ class App extends React.Component<Props, state> {
                   }
                 />
               </Routes>
+              </div>
+              
+              <footer>
+                <div className='container'>
+                  <span>
+                    Made with React. © Copyright {(new Date().getFullYear())}.
+                  </span>
+                  <span>
+                    |
+                  </span>
+                  <span className={'footer__social'}>
+                    <SocialIcon url="https://github.com/FortTheStrox" style={{ height: 25, width: 25 }} />
+                    <SocialIcon url="https://www.linkedin.com/in/jared-erlien-728a82106/" style={{ height: 25, width: 25 }} />
+                  </span>
+                </div>
+                
+              </footer>
               
             </div>
             
