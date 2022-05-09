@@ -1,6 +1,7 @@
 {
   "name": "resume",
   "version": "0.1.0",
+  "homepage": "https://fortthestrox.github.io/github-resume",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.2",

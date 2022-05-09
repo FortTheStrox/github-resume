@@ -18,7 +18,9 @@ import Portfolio from './Portfolio';
 // STYLING
 import './../css/main.min.css';
 
-
+// change this if you want to deploy 
+// "" or "/github-resume"
+const deploy_str: string = "/github-resume";
 
 type Props = {
   // none
@@ -63,7 +65,7 @@ class App extends React.Component<Props, state> {
                 <ul className={'nav-links ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
                   <li>
                   <NavLink
-                      to="/"
+                      to={deploy_str + "/"}
                       className={({ isActive }) =>
                         isActive ? "active-link" : undefined
                       }
@@ -73,7 +75,7 @@ class App extends React.Component<Props, state> {
                   </li>
                   <li>
                     <NavLink
-                      to="/ABOUT"
+                      to={deploy_str + "/ABOUT"}
                       className={({ isActive }) =>
                         isActive ? "active-link" : undefined
                       }
@@ -83,7 +85,7 @@ class App extends React.Component<Props, state> {
                   </li>
                   <li>
                     <NavLink
-                      to="/SKILLSET"
+                      to={deploy_str + "/SKILLSET"}
                       className={({ isActive }) =>
                         isActive ? "active-link" : undefined
                       }
@@ -108,9 +110,9 @@ class App extends React.Component<Props, state> {
               </nav>
               <div className='base-page'>
               <Routes>
-                <Route path="/" element={<Portfolio />} />
-                <Route path="/ABOUT" element={<About />} />
-                <Route path="/SKILLSET" element={<Skillset />} />
+                <Route path={deploy_str + "/"} element={<Portfolio />} />
+                <Route path={deploy_str + "/ABOUT"} element={<About />} />
+                <Route path={deploy_str + "/SKILLSET"} element={<Skillset />} />
                 
                 <Route
                   path="*"
