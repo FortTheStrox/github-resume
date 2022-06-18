@@ -8,10 +8,7 @@
 .about {
     display: flex;
     justify-content: center;
-    // delete this
-    flex-direction: column;
 
-    flex-grow: 1
 }
 
 .landing {
@@ -29,6 +26,7 @@
 
     padding: 120px 100px;
     margin: 0 auto;
+    
 }
 
 .tagline {

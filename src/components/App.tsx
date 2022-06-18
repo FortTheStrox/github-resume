@@ -126,8 +126,8 @@ class App extends React.Component<Props, state> {
               </div>
               
               <footer>
-                <div className='container'>
-                  <span>
+                <div className={'container ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
+                  <span className={'footer__about'}>
                     Made with React. © Copyright {(new Date().getFullYear())}.
                   </span>
                   <span>

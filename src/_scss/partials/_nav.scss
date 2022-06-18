@@ -22,7 +22,7 @@
         flex: 1;
 
         margin: 0;
-        padding: 1em 0 0 140px;
+        padding: 1em 0 0 calc(7% + 5px);
 
         @include themed() {
             color: t($text);

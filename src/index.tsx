@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter,
-  Routes,
-  Route,
+  BrowserRouter
 } from "react-router-dom";
 
 import './css/main.min.css';

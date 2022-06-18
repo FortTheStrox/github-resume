@@ -4,6 +4,8 @@ const Skillset = () => {
     return (
       <div className='Skillset'>
         <p>Where my skills would be</p>
+
+
       </div>
     );
 }
