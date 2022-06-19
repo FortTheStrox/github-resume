@@ -110,7 +110,7 @@ class App extends React.Component<Props, state> {
               </nav>
               <div className='base-page'>
               <Routes>
-                <Route path={deploy_str + "/"} element={<Portfolio />} />
+                <Route path={deploy_str + "/"} element={<Portfolio works={[]} hobby={[]} />} />
                 <Route path={deploy_str + "/ABOUT"} element={<About />} />
                 <Route path={deploy_str + "/SKILLSET"} element={<Skillset />} />
                 
