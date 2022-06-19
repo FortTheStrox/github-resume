@@ -101,10 +101,10 @@ const Portfolio = () => {
         exclusive={true}
         onChange={handleChange}
       >
-        <ToggleButton value='work'>
+        <ToggleButton className='t-button' value='work'>
           Work
         </ToggleButton>
-        <ToggleButton value='hobby'>
+        <ToggleButton className='t-button' value='hobby'>
           Hobby
         </ToggleButton>
       </ToggleButtonGroup>
