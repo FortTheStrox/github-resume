@@ -21,9 +21,8 @@ const About = () => {
             </div>
           </div>
           <div className='secondRow'>
-            <div>
               <h2 className='tagline'>I'm Jared Erlien, I'm a Cyber Security Analyst leveraging my experience as a Software Engineer to pursue my passion in Application Security and all things Security related! 🐱‍💻</h2>
-            </div>
+
           </div>
         </header>
         

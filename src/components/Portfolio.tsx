@@ -12,7 +12,7 @@ const projects = [
   {
     id: 0,
     category: 'work',
-    title: 'User Interface for Undisclosed Product',
+    title: 'Installation Wizard full-stack Development',
     tags: ['Angular'],
     desc: 'Providing a intuitive user interface for team\'s main product',
     class: 'tes',
@@ -22,16 +22,16 @@ const projects = [
     category: 'hobby',
     title: 'External Cheat Trainer',
     tags: ['Cheat Engine', 'Visual Code', 'C++'],
-    desc: 'Providing a easy to use trainer with provided keybinds',
+    desc: 'Providing a loud version of a cheat trainer',
     class: 'hobTest',
     path: 'placeholder'
   },
   {
     id: 2,
     category: 'work',
-    title: 'User Interface for Undisclosed Product',
-    tags: ['Angular'],
-    desc: 'Providing a intuitive user interface for team\'s main product',
+    title: 'DevOps Automation',
+    tags: ['Bash', 'Jenkins', 'Artifactory'],
+    desc: 'Created scripts to automated manual processes to reduce error and work hours',
     class: 'tes',
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     category: 'hobby',
     title: 'Internal Cheat Trainer',
     tags: ['Cheat Engine', 'Visual Code', 'C++'],
-    desc: 'Providing a easy to use trainer with provided keybinds',
+    desc: 'Providing a silent version of a cheat trainer',
     class: 'hobTest',
     path: 'placeholder'
   },

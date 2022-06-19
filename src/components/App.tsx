@@ -56,97 +56,82 @@ class App extends React.Component<Props, state> {
 
   render() {
     return (
-      <div className='App'>
-        <div>
-          <div className={'theme ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
-            <div className='base'>
-              <nav className='nav-bar'>
-                <NavLink className='logo' to="/">Jared Erlien</NavLink>
-                <ul className={'nav-links ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
-                  <li>
-                  <NavLink
-                      to={deploy_str + "/"}
-                      className={({ isActive }) =>
+      <div className={'App theme ' + (this.state.dark ? ' theme--dark' : 'theme--default' )}>
+    <div className='base'>
+        <nav className='nav-bar'>
+            <NavLink className='logo' to="/">Jared Erlien</NavLink>
+            <ul className='nav-links'>
+                <li>
+                    <NavLink to={deploy_str + "/" } className={({ isActive })=>
                         isActive ? "active-link" : undefined
-                      }
-                    > 
-                      PORTFOLIO
+                        }
+                        >
+                        PORTFOLIO
                     </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to={deploy_str + "/ABOUT"}
-                      className={({ isActive }) =>
+                </li>
+                <li>
+                    <NavLink to={deploy_str + "/ABOUT" } className={({ isActive })=>
                         isActive ? "active-link" : undefined
-                      }
-                    > 
-                      ABOUT
+                        }
+                        >
+                        ABOUT
                     </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to={deploy_str + "/SKILLSET"}
-                      className={({ isActive }) =>
+                </li>
+                <li>
+                    <NavLink to={deploy_str + "/SKILLSET" } className={({ isActive })=>
                         isActive ? "active-link" : undefined
-                      }
-                    > 
-                      SKILLSET
+                        }
+                        >
+                        SKILLSET
                     </NavLink>
-                  </li>
-                  <li>
-                    
-                  </li>
-                  <li>
-                    <IconButton
-                      edge="end"
-                      color="inherit"
-                      aria-label="mode"
-                      onClick={this.changeTheme}
-                    >
-                      {this.state.dark ? <Brightness3Icon /> : <Brightness7Icon />}
+                </li>
+                <li>
+
+                </li>
+                <li>
+                    <IconButton edge="end" color="inherit" aria-label="mode" onClick={this.changeTheme}>
+                        {this.state.dark ?
+                        <Brightness3Icon /> :
+                        <Brightness7Icon />}
                     </IconButton>
-                  </li>
-                </ul>
-              </nav>
-              <div className='base-page'>
-              <Routes>
-                <Route path={deploy_str + "/"} element={<Portfolio />} />
-                <Route path={deploy_str + "/ABOUT"} element={<About />} />
-                <Route path={deploy_str + "/SKILLSET"} element={<Skillset />} />
-                
-                <Route
-                  path="*"
-                  element={
-                    <main style={{ padding: "1rem" }}>
-                      <p>There's nothing here!</p>
+                </li>
+            </ul>
+        </nav>
+        <div className='base-page'>
+            <Routes>
+                <Route path={deploy_str + "/" } element={<Portfolio />} />
+                <Route path={deploy_str + "/ABOUT" } element={<About />} />
+                <Route path={deploy_str + "/SKILLSET" } element={<Skillset />} />
+
+                <Route path="*" element={ <main style={{ padding: "1rem" }}>
+                    <p>There's nothing here!</p>
                     </main>
-                  }
-                />
-              </Routes>
-              </div>
-              
-              <footer>
-                <div className={'container ' + (this.state.dark ? 'theme--dark' : 'theme--default')}>
-                  <span className={'footer__about'}>
-                    Made with React. © Copyright {(new Date().getFullYear())}.
-                  </span>
-                  <span>
-                    |
-                  </span>
-                  <span className={'footer__social'}>
-                    <SocialIcon url="https://github.com/FortTheStrox" style={{ height: 25, width: 25 }} />
-                    <SocialIcon url="https://www.linkedin.com/in/jared-erlien-728a82106/" style={{ height: 25, width: 25 }} />
-                  </span>
-                </div>
-                
-              </footer>
-              
-            </div>
-            
-          </div>
+                    }
+                    />
+            </Routes>
         </div>
-        
-      </div>
+
+        <footer>
+            <div className={'container ' + (this.state.dark ? ' theme--dark' : 'theme--default' )}>
+                <span className={'footer__about'}>
+                    Made with React. © Copyright {(new Date().getFullYear())}.
+                </span>
+                <span>
+                    |
+                </span>
+                <span className={'footer__social'}>
+                    <SocialIcon url="https://github.com/FortTheStrox" style={{ height: 25, width: 25 }} />
+                    <SocialIcon url="https://www.linkedin.com/in/jared-erlien-728a82106/"
+                        style={{ height: 25, width: 25 }} />
+                </span>
+            </div>
+
+        </footer>
+
+
+    </div>
+
+</div>
     );
   }
 }

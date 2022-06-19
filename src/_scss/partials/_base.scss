@@ -13,29 +13,45 @@ html, body, #root, .base {
     // control the growth of how much screen is used by webpage
     height: 100%;
     width: 100%;
+    display: flex;
 }
 
 body {
     margin: 0;
 }
 
+.App {
+    // This was to allow flex grow to cover the whole screen, no more whitespace at the bottom!!!
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
 
 .base {
     @include themed() {
         color: t($text);
         background: t($bg);
     }
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     
+
     
     .base-page {
+        @include themed() {
+            color: t($text);
+            background: t($bg);
+        }
         // set height so that the background page is covered for theme and goes all the way down
         max-width: 1440px;
-        height: 72.7vh;
         
         display: flex;
+        // allow content to take up whole screen
+        flex: 1 1 auto;
 
         // these dictate the position of title and other stuff in portfolio probably should fix this
-        padding: 0px 50px 60px 5px;
+        padding: 0px 0px 80px 0px;
         margin: 0 35% 0 35%;
     }
 }
@@ -45,7 +61,6 @@ footer {
         color: t($text);
         background: t($bg);
     }
-    // these 3 lines dictate how the footer appears above the video background
     bottom: 0;
 
 
