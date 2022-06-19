@@ -1,1 +1,6 @@
 fix css in title in portfolio, probably should move some of its logic from base-page to portfolio
+
+
+6/18/2022
+ADD PROJECTS INTO PORTFOLIO page
+AND MAKE PROJECTS COMPONENT SO YOU CAN FILTER IF ITS A WORK OR HOBBY PROJECT
