@@ -8,6 +8,8 @@
 .about {
     display: flex;
     justify-content: center;
+    margin: 0 7% 0 7%;
+
 
 }
 
@@ -17,6 +19,7 @@
         background-color: t($bg);
     }
 
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -27,6 +30,35 @@
     padding: 120px 100px;
     margin: 0 auto;
     
+    .firstRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+
+        .picture {
+            display: flex;
+            flex-direction: row;
+
+            // static width and height so it doesn't overgrow past flexbox
+            width: 400px;
+            height: 400px;
+
+        }
+        .quote {
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                margin: 0;
+                padding: 0 0 0 20%;
+            }
+        }
+    }
 }
 
 .tagline {

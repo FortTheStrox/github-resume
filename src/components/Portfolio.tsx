@@ -1,67 +1,83 @@
 import * as React from 'react';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+
+import Project from './Project';
 
 import ceTest from './../img/portfolio/ce.png';
 
 import './../css/main.min.css';
 
-
-type Props = {
-  //
-}
-
-type state = {
-  filter : string
-}
-
-
-
 // Define Card attributes here 
-const works = [
+const projects = [
   {
     id: 0,
+    category: 'work',
     title: 'User Interface for Undisclosed Product',
     tags: ['Angular'],
     desc: 'Providing a intuitive user interface for team\'s main product',
     class: 'tes',
   },
   {
+    id: 1,
+    category: 'hobby',
+    title: 'External Cheat Trainer',
+    tags: ['Cheat Engine', 'Visual Code', 'C++'],
+    desc: 'Providing a easy to use trainer with provided keybinds',
+    class: 'hobTest',
+    path: 'placeholder'
+  },
+  {
     id: 2,
+    category: 'work',
     title: 'User Interface for Undisclosed Product',
     tags: ['Angular'],
     desc: 'Providing a intuitive user interface for team\'s main product',
     class: 'tes',
-  }
-]
-
-const hobbies = [
+  },
   {
-    'id': 1,
-    'title': 'External Cheat Trainer',
-    'tags': ['Cheat Engine', 'Visual Code', 'C++'],
-    'desc': 'Providing a easy to use trainer with provided keybinds',
-    'img': ceTest,
-    'class': 'hobTest',
-    'path': 'placeholder'
-  }
+    id: 4,
+    category: 'hobby',
+    title: 'Internal Cheat Trainer',
+    tags: ['Cheat Engine', 'Visual Code', 'C++'],
+    desc: 'Providing a easy to use trainer with provided keybinds',
+    class: 'hobTest',
+    path: 'placeholder'
+  },
 ]
 
 const Portfolio = () => {
+
   const [filter, setFilter] = React.useState('work');
 
+  // set initial useState to work-filtered projects
+  let JSXProjects: JSX.Element[] = [];
+  let filteredProjects = projects.filter(project => project.category == filter);
+  filteredProjects.forEach(project => JSXProjects.push(<Project key={project.id} {...project}/>)) 
+
+  
+  const [shownProjects, setProjects] = React.useState(JSXProjects);
+
+  // handles change in toggle filter
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
-    newFilter: string,
+    newFilter: string | null,
     ) => {
-      console.log(filter);
-      setFilter(newFilter);
-      
+      // prevent filter from being null bug 
+      if (newFilter !== null) {
+        
+        setFilter(newFilter);
+        console.log(filter);
+        let JSXProjects: JSX.Element[] = [];
+        let filteredProjects = projects.filter(project => project.category !== filter);
+        filteredProjects.forEach(project => {
+          // console.log(project.id);
+          JSXProjects.push(<Project key={project.id} {...project}/>)
+        }) 
+        setProjects(JSXProjects);
+      }
     }
+  
+  
   
 
   return (
@@ -82,7 +98,7 @@ const Portfolio = () => {
         <p>filter:</p>
       <ToggleButtonGroup 
         value={filter}
-        exclusive
+        exclusive={true}
         onChange={handleChange}
       >
         <ToggleButton value='work'>
@@ -94,7 +110,7 @@ const Portfolio = () => {
       </ToggleButtonGroup>
 
       {/* Cards */}
-      
+      {shownProjects}
       </div>
     </div>
   );
@@ -102,3 +118,8 @@ const Portfolio = () => {
 
 
 export default Portfolio;
+
+
+// {
+//   <Project {...projects.filter(project => project.category == filter)}/> 
+//  }
