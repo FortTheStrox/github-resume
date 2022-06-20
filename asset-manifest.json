@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/github-resume/static/css/main.89dc2140.css",
-    "main.js": "/github-resume/static/js/main.198ada82.js",
+    "main.css": "/github-resume/static/css/main.1662251e.css",
+    "main.js": "/github-resume/static/js/main.cd7ba4a3.js",
+    "static/media/ctf.png": "/github-resume/static/media/ctf.fbb284a3ce2b1ace21e1.png",
     "static/media/collage.jpg": "/github-resume/static/media/collage.e00d912f4eaecaf23f92.jpg",
+    "static/media/int_ce.png": "/github-resume/static/media/int_ce.66e23f7573b2938b7479.png",
+    "static/media/devops.jpg": "/github-resume/static/media/devops.a8ca89e96302367cd97b.jpg",
+    "static/media/ce.png": "/github-resume/static/media/ce.444ba27989e6947f17bf.png",
+    "static/media/frontend.jpg": "/github-resume/static/media/frontend.8fb77199fe00ae80a309.jpg",
     "index.html": "/github-resume/index.html",
-    "main.89dc2140.css.map": "/github-resume/static/css/main.89dc2140.css.map",
-    "main.198ada82.js.map": "/github-resume/static/js/main.198ada82.js.map"
+    "main.1662251e.css.map": "/github-resume/static/css/main.1662251e.css.map",
+    "main.cd7ba4a3.js.map": "/github-resume/static/js/main.cd7ba4a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.89dc2140.css",
-    "static/js/main.198ada82.js"
+    "static/css/main.1662251e.css",
+    "static/js/main.cd7ba4a3.js"
   ]
 }
