@@ -1,9 +1,14 @@
 import * as React from 'react';
-import { ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { Grid, ToggleButton, ToggleButtonGroup } from '@mui/material';
 
 import Project from './Project';
 
-import ceTest from './../img/portfolio/ce.png';
+import ce from './../img/portfolio/ce.png';
+import int_ce from './../img/portfolio/int_ce.png';
+import devops from './../img/portfolio/devops.jpg';
+import frontend from './../img/portfolio/frontend.jpg';
+import ctf from './../img/portfolio/ctf.png';
+
 
 import './../css/main.min.css';
 
@@ -15,6 +20,8 @@ const projects = [
     title: 'Installation Wizard full-stack Development',
     tags: ['Angular'],
     desc: 'Providing a intuitive user interface for team\'s main product',
+    image: frontend,
+    altimg: 'Front end example',
     class: 'tes',
   },
   {
@@ -22,7 +29,9 @@ const projects = [
     category: 'hobby',
     title: 'External Cheat Trainer',
     tags: ['Cheat Engine', 'Visual Code', 'C++'],
-    desc: 'Providing a loud version of a cheat trainer',
+    desc: 'Provide trainer table that interacts w/ game process memory',
+    image: ce,
+    altimg: 'Front end example',
     class: 'hobTest',
     path: 'placeholder'
   },
@@ -32,6 +41,8 @@ const projects = [
     title: 'DevOps Automation',
     tags: ['Bash', 'Jenkins', 'Artifactory'],
     desc: 'Created scripts to automated manual processes to reduce error and work hours',
+    image: devops,
+    altimg: 'DevOps automation',
     class: 'tes',
   },
   {
@@ -39,7 +50,20 @@ const projects = [
     category: 'hobby',
     title: 'Internal Cheat Trainer',
     tags: ['Cheat Engine', 'Visual Code', 'C++'],
-    desc: 'Providing a silent version of a cheat trainer',
+    desc: 'Trainer that\'s injected into game process, rather than modifiying memory',
+    image: int_ce,
+    altimg: 'Internal Cheat Trainer',
+    class: 'hobTest',
+    path: 'placeholder'
+  },
+  {
+    id: 5,
+    category: 'hobby',
+    title: 'Hacking Competitions',
+    tags: ['HackTheBox', 'NahamSec', 'CTF'],
+    desc: 'Participated in various CTFs as well as crackme challenges for Reverse Engineering',
+    image: ctf,
+    altimg: 'Hacking example',
     class: 'hobTest',
     path: 'placeholder'
   },
@@ -52,7 +76,7 @@ const Portfolio = () => {
   // set initial useState to work-filtered projects
   let JSXProjects: JSX.Element[] = [];
   let filteredProjects = projects.filter(project => project.category == filter);
-  filteredProjects.forEach(project => JSXProjects.push(<Project key={project.id} {...project}/>)) 
+  filteredProjects.forEach(project => JSXProjects.push(<Grid item xs={6}><Project key={project.id} {...project}/></Grid>)) 
 
   
   const [shownProjects, setProjects] = React.useState(JSXProjects);
@@ -71,7 +95,7 @@ const Portfolio = () => {
         let filteredProjects = projects.filter(project => project.category !== filter);
         filteredProjects.forEach(project => {
           // console.log(project.id);
-          JSXProjects.push(<Project key={project.id} {...project}/>)
+          JSXProjects.push(<Grid item xs={6}><Project key={project.id} {...project}/></Grid>)
         }) 
         setProjects(JSXProjects);
       }
@@ -110,7 +134,9 @@ const Portfolio = () => {
       </ToggleButtonGroup>
 
       {/* Cards */}
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
       {shownProjects}
+      </Grid>
       </div>
     </div>
   );

@@ -6,21 +6,31 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
+import ceimg from '../img/portfolio/ce.png';
+
 type Props = {
 id: number,
 title: string,
 tags: string[],
 desc: string,
+image: string,
+altimg: string,
 class: string,
 }
 
 const Project = (item: Props) => {
     return (
         <Card 
-        sx={{ maxWidth: 345 }} 
+        sx={{ maxWidth: 345, minHeight: 305 }} 
         key={item.id}
         >
         <CardActionArea>
+        <CardMedia
+          component="img"
+          height="160"
+          image={item.image}
+          alt={item.altimg}
+        />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
                 {item.title}
