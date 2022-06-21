@@ -106,16 +106,19 @@ const Portfolio = () => {
 
   return (
     <div className='Portfolio'>
-      <div className='title'>Software Engineer, Security Analyst, Adrenaline Seeker</div>
-      <div className='intro'>
-        <p>Hello! I'm a software engineer who likes security.
-          <br />
-          I'm currently working on protecting systems
-          <br />
-          at an undisclosed company!
+      <div className='info'>
+        <div className='title'>Software Engineer, Security Analyst, Adrenaline Seeker</div>
+        <div className='intro'>
+          <p>Hello! I'm a software engineer who likes security.
+            <br />
+            I'm currently working on protecting systems
+            <br />
+            at an undisclosed company!
 
-        </p>
+          </p>
+        </div>
       </div>
+      
 
       {/* Section for Card Filter Toggle */}
       <div className='body'>

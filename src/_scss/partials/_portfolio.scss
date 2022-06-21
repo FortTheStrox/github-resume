@@ -1,16 +1,21 @@
 @import 'globals';
 
 .Portfolio {
-    .title {
-        color: $dark-orange;
-        font-size: 18px;
-        font-weight: 700;
+    .info {
+        margin: 0;
+
+        .title {
+            color: $dark-orange;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .intro p {
+            line-height: 1.6;
+            margin-top: 5px;
+        }
     }
     
-    .intro p {
-        line-height: 1.6;
-        margin-top: 5px;
-    }
     
     .t-button {
         background: white;
