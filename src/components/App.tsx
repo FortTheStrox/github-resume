@@ -97,7 +97,7 @@ class App extends React.Component<Props, state> {
                 </li>
             </ul>
         </nav>
-        <div className='base-page'>
+        
             <Routes>
                 <Route path={deploy_str + "/" } element={<Portfolio />} />
                 <Route path={deploy_str + "/ABOUT" } element={<About />} />
@@ -109,7 +109,7 @@ class App extends React.Component<Props, state> {
                     }
                     />
             </Routes>
-        </div>
+        
 
         <footer>
             <div className={'container ' + (this.state.dark ? ' theme--dark' : 'theme--default' )}>

@@ -1,8 +1,9 @@
 @import 'globals';
 
 .Portfolio {
+    // info section to match margin of nav logo
     .info {
-        margin: 0;
+        margin: 0 0 0 7vw;
 
         .title {
             color: $dark-orange;
@@ -19,6 +20,30 @@
     
     .t-button {
         background: white;
+    }
+
+    .project-area {
+        display: flex;
+        flex-direction: column;
+
+        .filter-button {
+            display: flex;
+            flex-direction: row;
+            p {
+                padding-right: 10px;
+            }
+            
+        }
+    }
+}
+
+// Ultra Wide Monitors
+@media screen and (min-width: 1921px) and (max-width: 3440px) {
+    .Portfolio {
+        // info section to match margin of nav logo
+        .info {
+            margin: 0 0 0 25vw;
+        }
     }
 }
 

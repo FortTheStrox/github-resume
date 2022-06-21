@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     
 
-    
+    // act as supporting css template for base page margin
     .base-page {
         @include themed() {
             color: t($text);

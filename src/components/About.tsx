@@ -5,7 +5,7 @@ import './../css/main.min.css';
 
 const About = () => {
     return (
-      <div className='about'>
+      <div className='about base-page'>
         <header className='landing'>
           <div className='firstRow'>
             <div className='picture'>
