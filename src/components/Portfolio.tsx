@@ -124,7 +124,7 @@ const Portfolio = () => {
       <div className='base-page'>
       <div className='project-area'>
         <div className='filter-button'>
-        <p>filter:   </p>
+        <p>filter:</p>
       <ToggleButtonGroup 
         value={filter}
         exclusive={true}

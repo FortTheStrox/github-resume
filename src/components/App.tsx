@@ -59,7 +59,7 @@ class App extends React.Component<Props, state> {
       <div className={'App theme ' + (this.state.dark ? ' theme--dark' : 'theme--default' )}>
     <div className='base'>
         <nav className='nav-bar'>
-            <NavLink className='logo' to="/">Jared Erlien</NavLink>
+            <NavLink className='logo' to={deploy_str + "/"}>Jared Erlien</NavLink>
             <ul className='nav-links'>
                 <li>
                     <NavLink to={deploy_str + "/" } className={({ isActive })=>
