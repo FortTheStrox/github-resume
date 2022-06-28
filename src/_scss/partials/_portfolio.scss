@@ -1,6 +1,10 @@
 @import 'globals';
 
 .Portfolio {
+    @include themed() {
+        color: t($text);
+        background-color: t($bg);
+    }
     // info section to match margin of nav logo
 
     display: flex;
@@ -23,9 +27,13 @@
         }
     }
     
-    
+    // make filter button pretty on hover and on theme switch
     .t-button {
         background: white;
+
+        &:hover {
+            background: grey;
+        }
     }
 
     .project-area {
@@ -39,10 +47,18 @@
         .filter-button {
             display: flex;
             flex-direction: row;
+
+            margin-bottom: 10px;
+
             p {
                 padding-right: 10px;
             }
             
+            // material ui override
+            .Mui-selected {
+                color:white;
+                background: grey;
+            }
         }
     }
 }

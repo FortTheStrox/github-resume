@@ -9,4 +9,9 @@ AND MAKE PROJECTS COMPONENT SO YOU CAN FILTER IF ITS A WORK OR HOBBY PROJECT
 6/26/2022
 implemented appbar and toolbar for header ui from material ui
 need to implement:
-- themeswitcher from material ui
+- themeswitcher from material 
+
+6/27/2022
+reimplemented theme switcher from akatie mctigue, issue with how material ui integrates the theme switcher at parent level
+to do:
+fix skillset and freshen up about page (add more content about me)

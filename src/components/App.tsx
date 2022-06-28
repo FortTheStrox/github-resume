@@ -6,15 +6,17 @@ import {
   Route,
 } from "react-router-dom";
 import { SocialIcon } from 'react-social-icons';
-
-
+import AppBar from '@mui/material/AppBar';
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Brightness3Icon from '@mui/icons-material/Brightness3';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 
 // COMPONENTS
 import About from './About';
 import Skillset from './Skillset';
 import Portfolio from './Portfolio';
-import Header from './Header';
 
 // STYLING
 import './../css/main.min.css';
@@ -59,7 +61,50 @@ class App extends React.Component<Props, state> {
     return (
       <div className={'App theme ' + (this.state.dark ? ' theme--dark' : 'theme--default' )}>
         <div className='base'>
-            <Header />
+        {/* elevation removes box shadow from appbar */}
+        <AppBar 
+            position='static' 
+            color='transparent' 
+            elevation={0}
+        >
+            <Toolbar disableGutters>
+            <NavLink className='logo' to={deploy_str + "/"}>Jared Erlien</NavLink>
+            <ul className='nav-links'>
+                <li>
+                    <NavLink to={deploy_str + "/" } className={({ isActive })=>
+                        isActive ? "active-link" : undefined
+                        }
+                        >
+                        PORTFOLIO
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={deploy_str + "/ABOUT" } className={({ isActive })=>
+                        isActive ? "active-link" : undefined
+                        }
+                        >
+                        ABOUT
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={deploy_str + "/SKILLSET" } className={({ isActive })=>
+                        isActive ? "active-link" : undefined
+                        }
+                        >
+                        SKILLSET
+                    </NavLink>
+                </li>
+                <li>
+
+                </li>
+                <li>
+                    <IconButton edge="end" color="inherit" aria-label="mode" onClick={this.changeTheme}>
+                      {this.state.dark ? <Brightness3Icon /> : <Brightness7Icon />}
+                    </IconButton>
+                </li>
+            </ul>
+            </Toolbar>
+        </AppBar>
             <Routes>
                 <Route path={deploy_str + "/" } element={<Portfolio />} />
                 <Route path={deploy_str + "/ABOUT" } element={<About />} />

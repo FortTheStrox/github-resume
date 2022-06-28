@@ -77,7 +77,6 @@ const Portfolio = () => {
   let JSXProjects: JSX.Element[] = [];
   let filteredProjects = projects.filter(project => project.category == filter);
   filteredProjects.forEach(project => JSXProjects.push(<Grid item xs={6}><Project key={project.id} {...project}/></Grid>)) 
-
   
   const [shownProjects, setProjects] = React.useState(JSXProjects);
 
@@ -101,9 +100,6 @@ const Portfolio = () => {
       }
     }
   
-  
-  
-
   return (
     <div className='Portfolio'>
       <div className='info'>
@@ -119,12 +115,12 @@ const Portfolio = () => {
         </div>
       </div>
       
-
       {/* Section for Card Filter Toggle */}
       <div className='project-area'>
           <div className='filter-button'>
             <p>filter:</p>
             <ToggleButtonGroup 
+              size='medium'
               value={filter}
               exclusive={true}
               onChange={handleChange}
@@ -138,7 +134,6 @@ const Portfolio = () => {
             </ToggleButtonGroup>
           </div>
         
-
           {/* Cards */}
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             {shownProjects}
