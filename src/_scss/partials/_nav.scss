@@ -7,30 +7,26 @@
     cursor: pointer;
 }
 
-.nav-bar {
+ul {
+    margin: 0 7vw 0 0;
+    padding: 3em 0 0 0;
+}
+
+.logo {
     display: flex;
-    justify-content: right;
-    ul {
-        margin: 0 7vw 0 0;
-        padding: 3em 0 0 0;
+    justify-content: left;
+    align-items: center;
+    flex: 1;
+
+    margin: 0 0 0 7vw;
+    padding: 1em 0 0 0;
+
+    @include themed() {
+        color: t($text);
     }
 
-    .logo {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        flex: 1;
-
-        margin: 0 0 0 7vw;
-        padding: 1em 0 0 0;
-
-        @include themed() {
-            color: t($text);
-        }
-
-        text-decoration: none;
-        font-size:xx-large
-    }
+    text-decoration: none;
+    font-size:xx-large
 }
 
 // styling for how the nav bar list is shown

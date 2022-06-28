@@ -121,31 +121,29 @@ const Portfolio = () => {
       
 
       {/* Section for Card Filter Toggle */}
-      <div className='base-page'>
       <div className='project-area'>
-        <div className='filter-button'>
-        <p>filter:</p>
-      <ToggleButtonGroup 
-        value={filter}
-        exclusive={true}
-        onChange={handleChange}
-      >
-        <ToggleButton className='t-button' value='work'>
-          Work
-        </ToggleButton>
-        <ToggleButton className='t-button' value='hobby'>
-          Hobby
-        </ToggleButton>
-      </ToggleButtonGroup>
-        </div>
-      
+          <div className='filter-button'>
+            <p>filter:</p>
+            <ToggleButtonGroup 
+              value={filter}
+              exclusive={true}
+              onChange={handleChange}
+            >
+              <ToggleButton className='t-button' value='work'>
+                Work
+              </ToggleButton>
+              <ToggleButton className='t-button' value='hobby'>
+                Hobby
+              </ToggleButton>
+            </ToggleButtonGroup>
+          </div>
+        
 
-      {/* Cards */}
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-      {shownProjects}
-      </Grid>
-      </div>
-      </div>
+          {/* Cards */}
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            {shownProjects}
+          </Grid>
+        </div>
       
     </div>
   );

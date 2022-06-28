@@ -4,3 +4,9 @@ fix css in title in portfolio, probably should move some of its logic from base-
 6/18/2022
 ADD PROJECTS INTO PORTFOLIO page
 AND MAKE PROJECTS COMPONENT SO YOU CAN FILTER IF ITS A WORK OR HOBBY PROJECT
+
+
+6/26/2022
+implemented appbar and toolbar for header ui from material ui
+need to implement:
+- themeswitcher from material ui

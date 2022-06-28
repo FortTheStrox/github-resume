@@ -2,6 +2,12 @@
 
 .Portfolio {
     // info section to match margin of nav logo
+
+    display: flex;
+    // allow content to take up whole screen
+    flex: 1 1 auto;
+    flex-direction: column;
+    
     .info {
         margin: 0 0 0 7vw;
 
@@ -23,8 +29,12 @@
     }
 
     .project-area {
+        // keep filter on top of grid
         display: flex;
         flex-direction: column;
+        
+        // have center display look
+        margin: 0 35% 0 35%;
 
         .filter-button {
             display: flex;
