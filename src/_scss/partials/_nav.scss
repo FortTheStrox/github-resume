@@ -63,11 +63,10 @@ ul {
 
 // Ultra Wide Monitors
 @media screen and (min-width: 1921px) and (max-width: 3440px) {
-    .nav-bar {
+    .App {
         ul {
             margin: 0 25vw 0 0;
         }
-
         .logo {
             margin: 0 0 0 25vw;
         }

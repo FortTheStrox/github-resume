@@ -17,9 +17,9 @@ const projects = [
   {
     id: 0,
     category: 'work',
-    title: 'Installation Wizard full-stack Development',
+    title: 'Full-Stack Development',
     tags: ['Angular'],
-    desc: 'Providing a intuitive user interface for team\'s main product',
+    desc: 'Full-stack developer for OSI\'s Automation and Security team',
     image: frontend,
     altimg: 'Front end example',
     class: 'tes',
@@ -93,7 +93,6 @@ const Portfolio = () => {
         let JSXProjects: JSX.Element[] = [];
         let filteredProjects = projects.filter(project => project.category !== filter);
         filteredProjects.forEach(project => {
-          // console.log(project.id);
           JSXProjects.push(<Grid item xs={6}><Project key={project.id} {...project}/></Grid>)
         }) 
         setProjects(JSXProjects);

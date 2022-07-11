@@ -21,7 +21,7 @@ class: string,
 const Project = (item: Props) => {
     return (
         <Card 
-        sx={{ maxWidth: 345, minHeight: 305 }} 
+        sx={{ maxWidth: 345}} 
         key={item.id}
         >
         <CardActionArea>
